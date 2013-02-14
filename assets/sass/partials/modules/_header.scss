@@ -1,0 +1,63 @@
+// Header
+header[role="banner"]{
+	border-bottom: $base-spacing-unit / 4 solid #eee;
+	a{
+		color: #ccc;
+		&:hover{
+			color: $brand;
+		}
+	}
+}
+
+
+.branding{
+	@include font(body);
+	font-weight: 400;
+	text-align: center;
+	margin: 0;
+	font-size: 1.5em;
+	@include respond-to(medium){
+		text-align: left;
+		float: left;
+		padding-top: .625em;
+	}
+	@include respond-to(large){
+		text-align: left;
+		float: left;
+		padding-top: .5em;
+	}
+}
+
+// fact Spinner
+.fact-spinner{
+	padding: $base-spacing-unit / 6 0;
+	font-size: 1.125em;
+	font-weight: 400;
+	background: lighten($brand,10);
+	color: rgba(255,255,255,.9);
+	margin-bottom: $half-spacing-unit;
+	@include transition-property(background);
+	@include transition-duration(.5s);
+	&:hover{
+		cursor: pointer;
+		background: $brand;
+	}
+	.wide-column{
+		position: relative;
+	}
+}
+
+.icon-refresh{
+	color: rgba(255,255,255,.75);
+	cursor: pointer;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	&:hover{
+		color: white;
+	}
+}
+
+.fact{
+	color: rgba(255,255,255,.75);
+}

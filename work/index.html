@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="page-content" role="main">
+	<div class="wide-column">
+		<ul class="posts grid-row">
+		  {% for post in site.categories.work %}
+		  <li class="post-thumb column">
+		    <a href="{{ post.url }}">
+				<img src="{{ post.thumbnail }}" alt="{{post.title}} Thumbnail"/>
+		    </a>
+		  </li>
+		  {% endfor %}
+		</ul>
+		<p>To see my most recent work, check out my <a href="http://dribbble.com/brianjhanson">Dribbble</a>.
+	</div>
+</section>

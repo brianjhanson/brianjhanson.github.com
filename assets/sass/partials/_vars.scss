@@ -1,0 +1,35 @@
+
+
+
+// Typography
+	
+	// fonts
+	$headline-font: "adelle-1","adelle-2";
+	$body-font: "source-sans-pro-1","source-sans-pro-2";
+
+	// Sizes
+	$base-font-size: 1; // em
+	$base-line-height: 1.6em;
+
+	// Margins
+	$base-spacing-unit: $base-line-height;
+	$half-spacing-unit: $base-spacing-unit / 2;
+
+// Layout
+	$max-width: 1200px;
+	
+	// Breakpoints
+	$break1: 490px;
+	$break2: 970px;
+	$break3: 1000px;
+
+// Grid
+	$gutter: 20px;
+	$columns: 16;
+
+// Colors
+	$brand: #3ace9b;
+	$ltGray: #ccc;
+	$medGray: #666;
+	$drkGray: #444;
+
