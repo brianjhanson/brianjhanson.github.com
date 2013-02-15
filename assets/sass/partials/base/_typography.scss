@@ -1,29 +1,30 @@
 html{
+	@include font(body);
 	font-size: $base-font-size; // Set up base size for 
+	line-height: $base-line-height;
 	@include respond-to(medium){
-		@include font-size(18);
+		font-size: 18px;
 	}
 	@include respond-to(large){
-		@include font-size(20);
+		font-size: 20px;
 	}
 }
 
 body{
-	@include font(body);
-	@include font-size($base-font-size);
-	line-height: $base-line-height;
+	@include respond-to(small){
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 p{
 	margin: 0;
-}
-
-p+p{
-	text-indent: 1em;
-}
-
-.centered{
-	text-align: center;
+	&+p{
+		text-indent: 1em;
+	}
+	&.centered{
+		text-align: center;
+	}
 }
 
 a{
@@ -63,15 +64,15 @@ figure.quote{
 		}
 	}
 }
-
 blockquote{
-	margin: 0;
-	padding-left: $base-spacing-unit;
-	font-style: italic;
 	color: #999;
 	border-left: $base-spacing-unit / 4 solid #ddd;
+	p{
+		margin: 0 !important;
+		padding-left: $base-spacing-unit;
+		font-style: italic;
+	}
 }
-
 
 // Lists
 ul{
@@ -93,9 +94,11 @@ h1, h2, h3, h4, h5{
 	text-align: center;
 }
 
+// Use .h1, .h2, etc classes for size? Regular ones for stying? Need a way to be able to use <h1> consitently without constantly removing margins and paddings and stuff. Things needed when in an article but not as much when it's on its own.
+
 h1, .h1 {
 	margin: 0;
-	@include font-size(1.4);
+	@include font-size(22);
 	line-height: 1.4em;
 	margin-bottom: 16px;
 	margin-bottom: rem(16);
