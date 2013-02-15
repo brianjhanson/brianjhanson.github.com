@@ -1,17 +1,33 @@
 
 // Blog pages
-.blog-title{
-	margin-top: 0;
-	margin-bottom: .5em;
+.blog{
+	position: relative;
+	padding: 16px 0 0 0;
+	padding: rem(16) 0 0 0;
+}
+
+.archive-year{
+	margin-bottom: $base-spacing-unit;
+	margin-bottom: rem($base-spacing-unit);
+	border-bottom: 1px solid #ccc;
+	@include font(body);
+	font-weight: 300;
+}
+
+.blog .title{
+	padding-left: 140px;
+	padding-left: rem(120);
 }
 
 .date{
-	margin-bottom: 0;
-	margin-top: 0;
+	color: #666;
+	float: left;
+	position: absolute;
+	bottom: 18px;
+	bottom: rem(18);
+
 }
 
 .post-blog article{
 	border-bottom: 1px solid #ccc;
-	padding-bottom: 2em;
-	margin-bottom: 2em;
 }

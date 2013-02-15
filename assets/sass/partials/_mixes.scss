@@ -8,9 +8,13 @@
 		}
 	}
 
-  @mixin font-size($sizeValue: 1){
-    font-size: ($sizeValue * 10) + px;
-    font-size: $sizeValue + rem;
+  @mixin font-size($sizeValue: 16){
+    font-size: ($sizeValue) + px;
+    font-size: ($sizeValue / $base-font-size) + rem;
+  }
+
+  @function rem($size: 16){
+    @return $size / $base-font-size + rem;
   }
 
 // Media queries
