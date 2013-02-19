@@ -2,62 +2,21 @@
 	@include box-sizing(border-box);
 }
 
-// .wrap{
-// 	max-width: $max-width;
-// 	margin: 0 auto;
-// 	padding-left: $gutter;
-// 	padding-right: $gutter;
-// 	@include clearfix;
-// }
-
-.wrap{
-	max-width: 1000px;
-	margin: 0 auto;
+.grid-row{
+	margin-left: -$gutter;
+	overflow: hidden;
 	@include clearfix;
 }
 
-.content{
-	margin-top: $base-spacing-unit * 2;
-	p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, pre, figure{
-		margin-left: 18%;
-		margin-right: 18%;
-	}
+.column{
+	float: left;
 }
 
-.content .pull{
-	margin-left: 0;
-	margin-right: 0;
+.fourth{
+	width: 25%;
 }
 
-
-// .copy{
-// 	@include respond-to(medium){
-// 		width: 75%;
-// 		max-width: $max-width * .75;
-// 	}
-// 	@include respond-to(large){
-// 		width: 60%;
-// 		max-width: $max-width * .6;
-// 	}
-// }
-
-// .wide{
-// 	@include respond-to(medium){
-// 		width: 90%;
-// 		max-width: $max-width * .9;
-// 	}
-// 	@include respond-to(large){
-// 		width: 75%;
-// 		max-width: $max-width * .75;
-// 	}
-// }
-
-// .full{
-// 	width: 100%;
-// }
-
-.module{
-	background: #ccc;
-	margin-bottom: $base-spacing-unit;
+.page-wrap{
+	max-width: 1000px;
+	margin: 0 auto;
 }
-

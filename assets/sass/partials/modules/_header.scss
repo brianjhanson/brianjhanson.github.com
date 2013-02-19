@@ -1,6 +1,8 @@
 // Header
 header[role="banner"]{
 	border-bottom: $base-spacing-unit / 4 solid #eee;
+	position: relative;
+	@include clearfix;
 	a{
 		color: #ccc;
 		&:hover{
@@ -13,9 +15,10 @@ header[role="banner"]{
 .branding{
 	@include font(body);
 	font-weight: 400;
-	text-align: center;
 	margin: 0;
 	font-size: 1.5em;
+	position: absolute;
+	bottom: 16px;
 	@include respond-to(medium){
 		text-align: left;
 		float: left;
@@ -38,11 +41,16 @@ header[role="banner"]{
 	margin-bottom: $half-spacing-unit;
 	@include transition-property(background);
 	@include transition-duration(.5s);
+	.facts{
+		margin-bottom: 0;
+	}
 	&:hover{
 		cursor: pointer;
 		background: $brand;
 	}
-	.wide-column{
+	.wrap{
+		max-width: $max-width;
+		margin: 0 auto;
 		position: relative;
 	}
 }

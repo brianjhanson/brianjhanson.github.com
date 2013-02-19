@@ -2,56 +2,18 @@
 layout: default
 ---
 
-<section class="wrap page content" role="main">
-<h1 class="page-title">Blog</h1>
-	<ul class="posts archive">
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Feb. 02, 2013</span><h1 class="title"> <a href="#">Just Ship It</a></h1>
-			</article>
-		</li>
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Feb. 01, 2013</span><h1 class="title"> <a href="#">And so it begins ...</a></h1>
-			</article>
-		</li>
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Jan. 31, 2013</span><h1 class="title"> <a href="#">One Reason why</a></h1>
-			</article>
-		</li>
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Jan. 27, 2013</span><h1 class="title"> <a href="#">The Perfect web design tool</a></h1>
-			</article>
-		</li>
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Jan. 02, 2013</span><h1 class="title"> <a href="#">Musical Chairs</a></h1>
-			</article>
-		</li>
-		<li class="post-blog">
-			<article class="blog">
-				<span class="date">Jan. 02, 2013</span><h1 class="title"> <a href="#">It makes me sad that this won't work out too well if there is a really long title</a></h1>
-			</article>
-		</li>
-	</ul>
-</section>
-			
-
-
-<section class="page-content" role="main">
-	<ul class="posts blog-posts">
+<section class="page" role="main">
+	<ul class="block-list">
 		{% for post in site.categories.blog %}
 		<li class="post-blog">
-			<article class="center-column">
-				<h6 class="post-date">{{ post.date | date: "%B %d, %Y" }}</h6>
-				{% if post.link %}
-					<a href="{{ post.link }}"><h1 class="blog-title">{{ post.title }}</h1></a>
-				{% else %}
-					<h1 class="blog-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-				{% endif %}
-				<!-- {{ post.content }} -->
+			<article class="{{ post.category }} copy">
+				<h6 class="post-date">{{ post.date | date: "%b %d, %Y" }}</h6>
+					{% if post.link %}
+						<h2 class="title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+					{% else if %}
+						<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					{% endif %}
+				{{ post.content }}
 			</article>
 		</li>
 		{% endfor %}

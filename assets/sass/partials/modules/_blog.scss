@@ -2,8 +2,6 @@
 // Blog pages
 .blog{
 	position: relative;
-	padding: 16px 0 0 0;
-	padding: rem(16) 0 0 0;
 }
 
 .archive-year{
@@ -14,20 +12,12 @@
 	font-weight: 300;
 }
 
-.blog .title{
-	padding-left: 140px;
-	padding-left: rem(120);
-}
-
-.date{
-	color: #666;
-	float: left;
-	position: absolute;
-	bottom: 18px;
-	bottom: rem(18);
-
-}
-
 .post-blog article{
-	border-bottom: 1px solid #ccc;
+	&:after{
+		content: " ";
+		border-bottom: 1px solid #999;
+		display: block;
+		width: 10rem;
+		margin: 3rem 18%;
+	}
 }
