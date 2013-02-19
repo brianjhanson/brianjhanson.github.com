@@ -9,9 +9,9 @@ layout: default
 			<article class="{{ post.category }} copy">
 				<h6 class="post-date">{{ post.date | date: "%b %d, %Y" }}</h6>
 					{% if post.link %}
-						<h2 class="title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+						<h2 class="title"><a href="{{ post.link }}">{{ post.title }} →</a></h2>
 					{% else if %}
-						<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+						<h2 class="title">{{ post.title }}</h2>
 					{% endif %}
 				{{ post.content }}
 			</article>

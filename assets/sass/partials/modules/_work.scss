@@ -17,8 +17,7 @@
 .post-thumb{
 	margin-bottom: $gutter;
 	background: $brand;
-	padding-left: $gutter;
-	border-right: $gutter solid white;
+	border-left: $gutter solid white;
 	@include transition-property(background);
 	@include transition-duration(.5s);
 	@include respond-to(medium){
