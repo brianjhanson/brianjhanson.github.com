@@ -3,7 +3,22 @@
 footer[role="contentinfo"]{
 	border-top: 1px solid #ccc;
 	padding: $base-spacing-unit 0;
-	margin-top: 2 * $base-spacing-unit;
+	margin-top: $base-spacing-unit * 2;
+}
+
+.hire{
+	@include respond-to(medium){
+		float: right;
+		position: absolute;
+		top: -1em;
+		right: $gutter;
+	}
+	@include respond-to(large){
+		float: right;
+		position: absolute;
+		top: -1em;
+		right: 0;
+	}
 }
 
 .social-media{
@@ -11,6 +26,9 @@ footer[role="contentinfo"]{
 	padding: 0;
 	list-style: none;
 	@include clearfix;
+	@include respond-to(small){
+		margin-bottom: 0;
+	}
 	li{
 		float: left;
 		margin-right: $gutter;
@@ -25,4 +43,11 @@ footer[role="contentinfo"]{
 			}
 		}
 	}
+}
+
+.disclaim{
+	font-size: 12px;
+	font-size: .75rem;
+	line-height: 1.4;
+	margin-bottom: 0;
 }

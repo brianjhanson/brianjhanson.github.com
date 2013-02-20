@@ -1,6 +1,8 @@
 // Header
 header[role="banner"]{
 	border-bottom: $base-spacing-unit / 4 solid #eee;
+	position: relative;
+	@include clearfix;
 	a{
 		color: #ccc;
 		&:hover{
@@ -12,16 +14,19 @@ header[role="banner"]{
 
 .branding{
 	@include font(body);
-	font-weight: 400;
-	text-align: center;
+	font-weight: 600;
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 1.5rem;
+	text-align: center;
+	// padding-left: $gutter;
+	padding-top: $base-spacing-unit;
 	@include respond-to(medium){
 		text-align: left;
 		float: left;
 		padding-top: .625em;
 	}
 	@include respond-to(large){
+		padding-left: 0;
 		text-align: left;
 		float: left;
 		padding-top: .5em;
@@ -30,7 +35,7 @@ header[role="banner"]{
 
 // fact Spinner
 .fact-spinner{
-	padding: $base-spacing-unit / 6 0;
+	padding: $base-spacing-unit / 6 $gutter;
 	font-size: 1.125em;
 	font-weight: 400;
 	background: lighten($brand,10);
@@ -38,11 +43,19 @@ header[role="banner"]{
 	margin-bottom: $half-spacing-unit;
 	@include transition-property(background);
 	@include transition-duration(.5s);
+	@include respond-to(large){
+		padding: $base-spacing-unit / 6 0;
+	}
+	.facts{
+		margin-bottom: 0;
+	}
 	&:hover{
 		cursor: pointer;
 		background: $brand;
 	}
-	.wide-column{
+	.wrap{
+		max-width: $max-width;
+		margin: 0 auto;
 		position: relative;
 	}
 }

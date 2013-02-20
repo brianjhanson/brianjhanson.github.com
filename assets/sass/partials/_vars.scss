@@ -8,15 +8,15 @@
 	$body-font: "source-sans-pro-1","source-sans-pro-2";
 
 	// Sizes
-	$base-font-size: 1; // em
-	$base-line-height: 1.6em;
+	$base-font-size: 16; // em
+	$base-line-height: 1.6;
 
 	// Margins
-	$base-spacing-unit: $base-line-height;
-	$half-spacing-unit: $base-spacing-unit / 2;
+	$base-spacing-unit: 1rem;
+	$half-spacing-unit: .5rem;
 
 // Layout
-	$max-width: 1200px;
+	$max-width: 1000px;
 	
 	// Breakpoints
 	$break1: 490px;
