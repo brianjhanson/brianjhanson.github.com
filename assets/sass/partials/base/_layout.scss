@@ -15,9 +15,13 @@ img{
 	background: $brand;
 	display: inline-block;
 	color: white;
+	text-align: center;
 	@include border-radius(5px);
 	&.large{
 		padding: .5em 1.5em;
+		@include respond-to(small){
+			width: 100%
+		}
 	}
 	&:hover{
 		background: shade($brand, 20);

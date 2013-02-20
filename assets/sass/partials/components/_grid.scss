@@ -14,9 +14,21 @@
 
 .fourth{
 	width: 25%;
+	@include respond-to(small){
+		width: 100%;
+	}
 }
 
 .page-wrap{
 	max-width: 1000px;
 	margin: 0 auto;
+	position: relative;
+	@include respond-to(medium){
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+	@include respond-to(small){
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
 }

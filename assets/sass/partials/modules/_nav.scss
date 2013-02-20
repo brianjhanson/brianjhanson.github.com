@@ -1,6 +1,7 @@
 // Main Nav
 
 nav[role="navigation"]{
+	@include clearfix;
 	@include respond-to(medium){
 		float: right;
 	}
@@ -8,6 +9,7 @@ nav[role="navigation"]{
 		float: right;
 	}
 	ul{
+		margin-top: 0;
 		padding-left: 0;
 		@include respond-to(medium){
 			max-width: 300px;
