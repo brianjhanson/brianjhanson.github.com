@@ -24,8 +24,9 @@ h1, h2, h3, blockquote{
 }
 
 blockquote {
-	margin-bottom: $base-font-size * 2 + px;
-	margin-top: $base-font-size * 2 + px;
+	margin: $dbl-spacing-unit 0;
+	// margin-bottom: $base-font-size * 2 + px;
+	// margin-top: $base-font-size * 2 + px;
 	padding: $base-font-size + px 0;
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
