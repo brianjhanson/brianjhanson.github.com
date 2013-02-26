@@ -1,13 +1,21 @@
 ---
-layout: archive
+layout: default
 category: work
 ---
+<div class="page-wrap">
 
-{% for post in site.categories.work %}		
-	<li>
-		<article>
-	  <a href="{{ post.url }}">
-			<img src="{{ post.thumbnail }}" alt="{{post.title}} Thumbnail"/>
-	  </a>
-	</li>
-{% endfor %}
+<section class="{{ page.category }} archive" role="main">
+
+<ul class="post-list grid-row">
+	{% for post in site.categories.work %}		
+		<li>
+		  <a href="{{ post.url }}">
+				<img src="{{ post.thumbnail }}" alt="{{post.title}} Thumbnail"/>
+		  </a>
+		</li>
+	{% endfor %}
+</ul>
+
+</section>
+
+</div>

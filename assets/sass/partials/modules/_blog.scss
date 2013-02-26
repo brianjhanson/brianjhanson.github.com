@@ -12,19 +12,20 @@
 	font-weight: 300;
 }
 
-article.blog{
-	&:after{
-		content: " ";
-		border-bottom: 1px solid #999;
-		display: block;
-		width: 10rem;
-		margin: 3rem 18%;
-		@include respond-to(medium){
-			margin: 3rem 12%;
-		}
-		@include respond-to(small){
-			width: 8rem;
-			margin: 3rem auto;
-		}
-	}
+.archive .post-date{
+	float: left;
+	position: absolute;
+	bottom: 1.2rem;
+}
+
+.blog .archive li{
+	position: relative;
+}
+
+.blog .title{
+	padding-left: 6.5rem;
+}
+
+.main-title{
+	margin-top: 0;
 }
