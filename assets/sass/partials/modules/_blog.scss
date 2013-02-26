@@ -16,6 +16,10 @@
 	float: left;
 	position: absolute;
 	bottom: 1.2rem;
+	@include respond-to(small){
+		float: none;
+		position: static;
+	}
 }
 
 .blog .archive li{
@@ -24,6 +28,9 @@
 
 .blog .title{
 	padding-left: 6.5rem;
+	@include respond-to(small){
+		padding-left: 0;
+	}
 }
 
 .main-title{
