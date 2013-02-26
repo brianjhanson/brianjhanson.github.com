@@ -3,10 +3,10 @@ html{
 	font-size: $base-font-size + px; // Set up base size for 
 	line-height: $base-line-height;
 	@include respond-to(medium){
-		font-size: 17px;
+		font-size: 112.5%;
 	}
 	@include respond-to(large){
-		font-size: 18px;
+		font-size: 125%;
 	}
 }
 
