@@ -1,18 +1,13 @@
 ---
-layout: default
+layout: archive
+category: work
 ---
-<section class="page" role="main">
-	<!-- <h1 class="page-title center-column">Work</h1> -->
-	<div class="grid-row">
-		<ul class="block-list">
-		  {% for post in site.categories.work %}
-		  <li class="post-thumb column fourth">
-		    <a href="{{ post.url }}">
-				<img src="{{ post.thumbnail }}" alt="{{post.title}} Thumbnail"/>
-		    </a>
-		  </li>
-		  {% endfor %}
-		</ul>
-	</div>
-	<p>To see my most recent work, check out my <a href="http://dribbble.com/brianjhanson">Dribbble</a>.
-</section>
+
+{% for post in site.categories.work %}		
+	<li>
+		<article>
+	  <a href="{{ post.url }}">
+			<img src="{{ post.thumbnail }}" alt="{{post.title}} Thumbnail"/>
+	  </a>
+	</li>
+{% endfor %}

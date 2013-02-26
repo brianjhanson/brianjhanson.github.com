@@ -1,8 +1,30 @@
 
-.page{
+.archive, .single{
 	margin-top: $base-spacing-unit * 2;
+	@extend .page-wrap;
 }
 
 .copy-block{
 	margin-bottom: $base-spacing-unit;
+}
+
+.post-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&.grid-row{
+		margin-left: -$gutter;
+	}
+}
+
+.paginate{
+	margin-left: 18%;
+	margin-right: 18%;
+	@include clearfix;
+	.prev{
+		float: left;
+	}
+	.next{
+		float: right;
+	}
 }
