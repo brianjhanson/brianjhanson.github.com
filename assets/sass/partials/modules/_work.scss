@@ -1,20 +1,7 @@
 // Portfolio
 
-.portfolio-piece{
-	padding-top: $base-spacing-unit;
-	header{
-		// border-top: 2px solid #222;
-		// padding-top:$base-spacing-unit;
-		margin-bottom: $base-spacing-unit;
-	h1{
-			margin-bottom: 0;
-			padding-bottom: $base-spacing-unit / 8;
-			// border-bottom: #ccc $base-spacing-unit/8 solid;
-		}
-	}
-}
-
-.post-thumb{
+.work.archive li{
+	float: left;
 	margin-bottom: $gutter;
 	background: $brand;
 	border-left: $gutter solid white;
@@ -32,12 +19,6 @@
 	&:hover{
 		background: shade($brand,20);
 	}
-}
-
-.thumb-title{
-	background: #222;
-	padding: .125em .6em;
-	color: white;
 }
 
 .web{

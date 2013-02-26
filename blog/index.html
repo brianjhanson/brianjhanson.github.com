@@ -1,21 +1,24 @@
 ---
 layout: default
+category: blog
 ---
+<div class="page-wrap">
 
-<section class="page" role="main">
-	<ul class="block-list">
+<section class="archive content" role="main">
+
+	<ul class="post-list">
 		{% for post in site.categories.blog %}
-		<li class="post-blog">
-			<article class="{{ post.category }} content">
+			<li>
 				<time class="post-date">{{ post.date | date: "%b %d, %Y" }}</time>
-					{% if post.link %}
-						<h2 class="title"><a href="{{ post.link }}">{{ post.title }} →</a></h2>
-					{% else if %}
-						<h2 class="title">{{ post.title }}</h2>
-					{% endif %}
-				{{ post.content }}
-			</article>
-		</li>
+				{% if post.link %}
+					<h2 class="title"><a href="{{ post.link }}">{{ post.title }} →</a></h2>
+				{% else if %}
+					<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				{% endif %}
+			</li>
 		{% endfor %}
 	</ul>
+
 </section>
+
+</div>
