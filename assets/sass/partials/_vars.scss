@@ -8,13 +8,17 @@
 	$body-font: "source-sans-pro-1","source-sans-pro-2";
 
 	// Sizes
-	$base-font-size: 16; // em
-	$base-line-height: 1.6;
+	$base-font-size: 16px; // em
+	$base-line-height: 1.7;
 
-	// Margins
-	$base-spacing-unit: 1.6rem;
-	$half-spacing-unit: .8rem;
-	$dbl-spacing-unit: 3.2rem;
+	// Margins rem
+	$base-spacing-em: $base-line-height * $base-font-size;
+	$half-spacing-em: $base-spacing-em / 2;
+	$dbl-spacing-em: $base-spacing-em * 2;
+
+	$base-spacing-unit: $base-line-height + 0rem;
+	$half-spacing-unit: $base-spacing-unit / 2;
+	$dbl-spacing-unit: $base-spacing-unit * 2;
 
 
 // Layout
@@ -32,6 +36,6 @@
 // Colors
 	$brand: #3ace9b;
 	$ltGray: #ccc;
-	$medGray: #666;
-	$drkGray: #444;
+	$medGray: #999;
+	$drkGray: #222;
 

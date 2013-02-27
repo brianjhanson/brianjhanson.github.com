@@ -1,6 +1,8 @@
 // Main Nav
 
 nav[role="navigation"]{
+
+	font-size: 16px;
 	@include clearfix;
 	@include respond-to(medium){
 		float: right;
@@ -16,9 +18,10 @@ nav[role="navigation"]{
 		}
 		li{
 			display: inline;
+			text-align: center;
 			@include clearfix;
 			a{
-				padding: $gutter;
+				padding: 1rem 1rem .5rem 1rem;
 				float: left;
 				width: 25%;
 				text-align: center;

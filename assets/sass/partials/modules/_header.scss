@@ -14,33 +14,27 @@ header[role="banner"]{
 
 .branding{
 	@include font(body);
-	font-weight: 600;
 	margin: 0;
+	font-weight: 400;
+	font-size: px(1.5);
 	font-size: 1.5rem;
-	text-align: center;
-	// padding-left: $gutter;
-	padding-top: $base-spacing-unit;
-	@include respond-to(medium){
-		text-align: left;
-		float: left;
-		padding-top: .625em;
-	}
-	@include respond-to(large){
-		padding-left: 0;
-		text-align: left;
-		float: left;
-		padding-top: .5em;
+	float: left;
+	padding-top: .5rem;
+	@include respond-to(small){
+		float: none;
+		text-align: center;
 	}
 }
 
 // fact Spinner
 .fact-spinner{
 	padding: $base-spacing-unit / 6 $gutter;
-	font-size: 1.125em;
-	font-weight: 400;
+	font-size: px(1);
+	font-size: 1rem;
+	font-weight: 300;
+	color: white;
 	background: lighten($brand,10);
-	color: rgba(255,255,255,.9);
-	margin-bottom: $half-spacing-unit;
+	margin-bottom: $base-spacing-unit;
 	@include transition-property(background);
 	@include transition-duration(.5s);
 	@include respond-to(large){
@@ -61,16 +55,11 @@ header[role="banner"]{
 }
 
 .icon-refresh{
-	color: rgba(255,255,255,.75);
 	cursor: pointer;
 	position: absolute;
-	top: 1px;
+	top: -3px;
 	right: 0;
 	&:hover{
 		color: white;
 	}
-}
-
-.fact{
-	color: rgba(255,255,255,.75);
 }

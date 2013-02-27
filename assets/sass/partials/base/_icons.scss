@@ -1,5 +1,6 @@
 [class*='icon-'], [class*='socialicon-']{
-	font-size: 1.25em;
+	font-size: $base-font-size * 1.25;
+	font-size: 1.25rem;
 }
 
 [class*='icon-']{
