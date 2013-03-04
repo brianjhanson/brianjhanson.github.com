@@ -13,8 +13,17 @@ layout: default
 
 	{{ content }}
 
-	{% if page.category != 'about' %}
+	<nav class="paginate">
+		{% if page.nexturl %}
+			<a href="{{ page.nexturl }}" class="next">Next →</a>
+		{% endif %}
+		{% if page.prevurl %}
+			<a href="{{ page.prevurl }}" class="prev">← Previous </a>
+		{% endif %}
+	</nav>
+
+<!-- 	{% if page.category != 'about' %}
 		<a href="/{{ page.category }}/" title="{{ page.category }}" class="large btn">Back to all posts</a>
-	{% endif %}
+	{% endif %} -->
 
 </article>

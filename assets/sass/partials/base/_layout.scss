@@ -20,8 +20,8 @@
 	}
 }
 
-.work [role="main"]{
-	max-width: 100%;
+.gallery[role="main"]{
+	max-width: 100% !important;
 }
 
 // .content, .single{
@@ -59,8 +59,6 @@
 }
 
 .paginate{
-	margin-left: 18%;
-	margin-right: 18%;
 	@include clearfix;
 	.prev{
 		float: left;
