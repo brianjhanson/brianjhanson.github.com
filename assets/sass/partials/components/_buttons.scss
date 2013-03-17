@@ -20,4 +20,12 @@
 	&:hover{
 		background: shade($brand, 20);
 	}
+	&.reverse{
+		background: white;
+		color: $brand;
+		border: 2px solid white;
+		&:hover{
+			background: lighten($brand, 60);
+		}
+	}
 }

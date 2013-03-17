@@ -1,29 +1,22 @@
 // Main Nav
 
 nav[role="navigation"]{
-
-	font-size: 16px;
 	@include clearfix;
-	@include respond-to(medium){
+	@include respond-to(mediumPlus){
+		width: 40%;
 		float: right;
-	}
-	@include respond-to(large){
-		float: right;
+		margin-right: 5%;
 	}
 	ul{
-		margin-top: 0;
-		padding-left: 0;
-		@include respond-to(medium){
-			max-width: 300px;
-		}
+		@include clearfix;
 		li{
-			display: inline;
+			float: left;
 			text-align: center;
+			width: 25%;
 			@include clearfix;
 			a{
-				padding: 1rem 1rem .5rem 1rem;
-				float: left;
-				width: 33%;
+				display: block;
+				padding: 1rem 0;
 				text-align: center;
 			}
 		}

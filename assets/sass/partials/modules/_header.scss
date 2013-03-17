@@ -1,6 +1,7 @@
 // Header
 header[role="banner"]{
-	border-bottom: $base-spacing-unit / 4 solid #eee;
+	background: #f6f6f6;
+	border-bottom: 1px solid #ddd;
 	position: relative;
 	@include clearfix;
 	a{
@@ -11,15 +12,13 @@ header[role="banner"]{
 	}
 }
 
-
 .branding{
+	padding: 1rem 0;
 	@include font(body);
-	margin: 0;
 	font-weight: 400;
-	font-size: px(1.5);
-	font-size: 1.5rem;
 	float: left;
-	padding-top: .5rem;
+	margin: 0 0 0 5%;
+	min-width: 40%;
 	@include respond-to(small){
 		float: none;
 		text-align: center;
@@ -27,39 +26,38 @@ header[role="banner"]{
 }
 
 // fact Spinner
-.fact-spinner{
-	padding: $base-spacing-unit / 6 $gutter;
-	font-size: px(1);
-	font-size: 1rem;
-	font-weight: 300;
-	color: white;
-	background: lighten($brand,10);
-	margin-bottom: $base-spacing-unit;
-	@include transition-property(background);
-	@include transition-duration(.5s);
-	@include respond-to(large){
-		padding: $base-spacing-unit / 6 0;
-	}
-	.facts{
-		margin-bottom: 0;
-	}
-	&:hover{
-		cursor: pointer;
-		background: $brand;
-	}
-	.wrap{
-		max-width: $max-width;
-		margin: 0 auto;
-		position: relative;
-	}
-}
+// .fact-spinner{
+// 	padding: $base-spacing-unit / 6 $gutter;
+// 	@include fontSize(1);
+// 	font-weight: 300;
+// 	color: white;
+// 	background: lighten($brand,10);
+// 	margin-bottom: $base-spacing-unit;
+// 	@include transition-property(background);
+// 	@include transition-duration(.5s);
+// 	@include respond-to(large){
+// 		padding: $base-spacing-unit / 6 0;
+// 	}
+// 	.facts{
+// 		margin-bottom: 0;
+// 	}
+// 	&:hover{
+// 		cursor: pointer;
+// 		background: $brand;
+// 	}
+// 	.wrap{
+// 		max-width: $max-width;
+// 		margin: 0 auto;
+// 		position: relative;
+// 	}
+// }
 
-.icon-refresh{
-	cursor: pointer;
-	position: absolute;
-	top: -3px;
-	right: 0;
-	&:hover{
-		color: white;
-	}
-}
+// .icon-refresh{
+// 	cursor: pointer;
+// 	position: absolute;
+// 	top: -3px;
+// 	right: 0;
+// 	&:hover{
+// 		color: white;
+// 	}
+// }

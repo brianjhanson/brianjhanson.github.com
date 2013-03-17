@@ -1,28 +1,22 @@
 // Footer
 
 footer[role="contentinfo"]{
+	background: #f6f6f6;
 	border-top: 1px solid #ccc;
 	padding: $base-spacing-unit 0;
 	margin-top: $base-spacing-unit * 2;
 } 
 
 .hire{
-	@include respond-to(medium){
+	@include respond-to(mediumPlus){
 		float: right;
-		position: absolute;
-		top: -1em;
+		margin-right: 5%;
 		right: $gutter;
-	}
-	@include respond-to(large){
-		float: right;
-		position: absolute;
-		top: -1em;
-		right: 0;
 	}
 }
 
 .social-media{
-	margin: 0 0 .5em 0; 
+	margin: 0 0 0 5%; 
 	padding: 0;
 	list-style: none;
 	@include clearfix;
@@ -46,6 +40,8 @@ footer[role="contentinfo"]{
 }
 
 .disclaim{
+	width: 90%;
+	margin: 0 auto;
 	font-size: 12px;
 	font-size: .75rem;
 	line-height: 1.4;

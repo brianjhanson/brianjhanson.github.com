@@ -8,9 +8,32 @@
 		}
 	}
 
-  @function px($size: $base-font-size){
-    @return $size * $base-font-size + px;
+@function px($size: $base-font-size){
+  @return $size * $base-font-size + px;
+}
+
+// rems
+
+@mixin marginRem($value){
+  margin: $value + px;
+  margin: $value / $base-font-size + rem;
+}
+
+@mixin fontRem($value){
+  font-size: $value + px;
+  font-size: $value / $base-font-size + rem;
+}
+
+@mixin fontSize($value, $unit: rem){
+  @if $unit == px{
+    font-size: $value + px;
+    font-size: $value / $base-font-size + rem;
   }
+  @else if $unit == rem{
+    font-size: $value * $base-font-size + px;
+    font-size: $value + rem;
+  }
+}
 
 // Media queries
 @mixin respond-to($media) {
@@ -22,5 +45,8 @@
   }
   @else if $media == large {
     @media only screen and (min-width: $break2 + 1) { @content; }
+  }
+  @else if $media == mediumPlus {
+    @media only screen and (min-width: $break1 + 1) { @content; }
   }
 }
