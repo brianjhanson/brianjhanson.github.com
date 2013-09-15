@@ -1,10 +1,14 @@
+body, html{
+	height: 100%;
+	position: relative;
+}
 
 .btn{
 	margin: 1em 0;
 	padding: .25em .5em;
-	background: $brand;
+	// background: $brand;
+	border: 1px solid lighten($brand, 20);
 	display: inline-block;
-	color: white;
 	text-align: center;
 	@include border-radius(5px);
 	&.large{
@@ -14,6 +18,10 @@
 		}
 	}
 	&:hover{
-		background: shade($brand, 20);
+		background: lighten($brand, 40);
 	}
+}
+
+.home .btn{
+	color: white;
 }

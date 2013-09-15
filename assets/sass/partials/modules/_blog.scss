@@ -6,7 +6,7 @@
 
 .archive-year{
 	margin-bottom: $base-spacing-unit;
-	margin-bottom: rem($base-spacing-unit);
+	margin-bottom: $base-spacing-unit;
 	border-bottom: 1px solid #ccc;
 	@include font(body);
 	font-weight: 300;
