@@ -22,7 +22,7 @@ footer[role="contentinfo"]{
 }
 
 .social-media{
-	margin: 0 0 .5em 0; 
+	margin: 0 0 .5em 0;
 	padding: 0;
 	list-style: none;
 	@include clearfix;
@@ -35,12 +35,8 @@ footer[role="contentinfo"]{
 		a{
 			display: block;
 			float: left;
-			color: #ccc;
 			width: 25%;
 			font-size: 2.25em;
-			&:hover{
-				color: $brand;
-			}
 		}
 	}
 }

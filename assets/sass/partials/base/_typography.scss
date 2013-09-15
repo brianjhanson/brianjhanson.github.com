@@ -1,6 +1,6 @@
 html{
 	@include font(body);
-	font-size: $base-font-size + px; // Set up base size for 
+	font-size: $base-font-size + px; // Set up base size for
 	line-height: $base-line-height;
 	@include respond-to(medium){
 		font-size: 112.5%;
@@ -13,6 +13,11 @@ html{
 a{
 	text-decoration: none;
 	color: $brand;
+	@include transition-property();
+	@include transition-duration(.25s);
+	&:hover{
+		color: darken($brand, 20);
+	}
 }
 
 h1, h2, h3, blockquote{
